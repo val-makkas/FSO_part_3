@@ -8,7 +8,8 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "@Remove-Item -Recurse -Force dist && cd ../FSO/part_2/phonebook && npm run build && @powershell Copy-Item dist -Recurse .../FSO_part_3/",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@stylistic/eslint-plugin-js": "^2.6.1",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4"
   }
 }
